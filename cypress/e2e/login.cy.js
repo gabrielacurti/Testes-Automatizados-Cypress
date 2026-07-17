@@ -13,8 +13,7 @@ describe('Login OrangeHRM', () => {
   
 
   it('Deve realizar login com sucesso', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
     cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
     cy.get(selectorsList.loginButton).click()
@@ -23,7 +22,7 @@ describe('Login OrangeHRM', () => {
   })
 
  it('Deve exibir mensagem de erro com credenciais inválidas', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
 
     cy.get(selectorsList.usernameField).type(userData.userFail.username)
     cy.get(selectorsList.passwordField).type(userData.userFail.password)
