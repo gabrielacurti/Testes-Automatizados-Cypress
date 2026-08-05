@@ -1,4 +1,4 @@
-class DashboarPage {
+class DashboardPage {
 
     selectorsList() {
         const selectors = {
